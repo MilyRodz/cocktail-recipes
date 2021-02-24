@@ -32,7 +32,7 @@ const Form = () => {
           }}
         >
             <fieldset className="text-center">
-                <legend>Find drinks by Category or ingredient</legend>
+                <legend>Find drinks by Category or Ingredient</legend>
             </fieldset>
 
             <div className="row mt-4">
@@ -41,7 +41,7 @@ const Form = () => {
                         name="name"
                         className="form-control"
                         type="text"
-                        placeholder="Search by ingredient"
+                        placeholder="Search by Ingredient"
                         onChange={getRecipe}
                     />
                 </div>

@@ -1,17 +1,20 @@
 import React, { useContext } from 'react';
-import {ContextRecipe, ContextRecipes} from '../context/ContextRecipe' 
+import Recipe from './Recipe';
+import { ContextRecipe } from '../context/ContextRecipe' 
 
 const RecipesList = () => {
 
   // extract the recipes
-  const { recipes } = useContext(ContextRecipes);
+  const { recipes } = useContext(ContextRecipe);
 
-  console.log(recipes);
 
   return ( 
     <div className="row mt-5">
       {recipes.map(recipe => (
-        
+        <Recipe 
+          key={recipe.idDrink}
+          recipe={recipe}
+        />
       ))}
     </div> );
 }

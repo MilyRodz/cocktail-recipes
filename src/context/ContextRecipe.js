@@ -1,9 +1,9 @@
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
-export const ContextRecipes = createContext();
+export const ContextRecipe = createContext();
 
-const RecipesProvider = (props) => {
+const ProviderRecipes = (props) => {
     
     const [recipes, saveRecipes] = useState([]);
     const [search, searchRecipes] = useState({
@@ -33,7 +33,7 @@ const RecipesProvider = (props) => {
       }, [search]);
 
     return (
-        <ContextRecipes.Provider
+        <ContextRecipe.Provider
             value={{
                 recipes,
                 searchRecipes, 
@@ -41,8 +41,8 @@ const RecipesProvider = (props) => {
             }}
         >
             {props.children}
-        </ContextRecipes.Provider>
+        </ContextRecipe.Provider>
     );
 }
 
-export default RecipesProvider;
+export default ProviderRecipes;
